@@ -1,0 +1,166 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+intents:
+- greet
+- affirm
+- deny
+- goodbye
+- book_room
+- num_rooms
+- type_rooms
+- book_number_room
+- clean_room
+- clean_room_now
+- clean_room_relative
+- faq_check_in_time:
+    triggers: action_check_in_time
+- faq_check_out_time:
+    triggers: action_check_out_time
+- faq_cancel_reservation:
+    triggers: action_cancel_reservation
+- faq_cancellation_policy:
+    triggers: action_cancellation_policy
+- faq_have_restaurant:
+    triggers: action_have_restaurant
+- faq_breakfast_avail:
+    triggers: action_breakfast_avail
+- faq_breakfast_time:
+    triggers: action_breakfast_time
+- faq_restaurant_time:
+    triggers: action_restaurant_time
+
+entities:
+- number
+- location
+- room_type
+
+slots:
+  number:
+    type: unfeaturized
+  room_type:
+    type: unfeaturized
+
+responses:
+
+  utter_greet:
+  - text: Hey! How can I help you?
+  - text: Hey there! How can I help you, today?
+
+  utter_submit:
+  - text: 'Your room(s) have been booked. Number of {room_type} rooms booked : {number}'
+
+  utter_ask_number:
+  - buttons:
+    - payload: /num_rooms{"number":"1"}
+      title: '1'
+    - payload: /num_rooms{"number":"2"}
+      title: '2'
+    text: Select the number of rooms you want to book
+
+  utter_ask_room_type:
+  - buttons:
+    - payload: /type_rooms{"room_type":"Simple"}
+      title: Simple
+    - payload: /type_rooms{"room_type":"Deluxe"}
+      title: Deluxe
+    text: Select from one of the room types
+
+  utter_simple_room_image:
+  - image: https://media-cdn.tripadvisor.com/media/photo-s/01/59/93/8d/simple-room.jpg
+    text: 'Simple room: '
+
+  utter_deluxe_room_image:
+  - image: https://www.mhotel.in/img/super/01.jpg
+    text: 'Deluxe room: '
+
+  utter_clean_room:
+  - text: When do you want to clean your room?
+
+  utter_clean_room_now:
+  - text: Someone is being sent to your room ASAP!
+
+  utter_clean_room_relative:
+  - text: Someone will be sent at your required time!
+
+  utter_check_in_time:
+  - text: Check-in time starts at 4 PM. Minimum check-in age is 21. Please contact
+      the reception for early check-in requests.
+
+  utter_check_out_time:
+  - text: Check-out time is 11 AM. Please contact the reception for late checkout
+      requests.
+
+  utter_cancel_reservation:
+  - text: To cancel a reservation, select the “Reservations” link from the homepage.
+  - text: On the Reservations page, under the heading ‘View, Change or Cancel a Reservation,’enter
+      your confirmation number, and either the last name on the reservation or the
+      last four digits of the credit card used to make the reservation.
+
+  utter_cancellation_policy:
+  - text: The booking deposit is refundable if the cancellation occurs at least 15
+      days before arrival. For cancellations made after this limit, a penalty will
+      be imposed based on the cancellation policy.
+
+  utter_have_restaurant:
+  - text: Yes, the hotel has a restaurant called the Zephyr Bar. With our menu we
+      strive to reflect the historic art and the spirit of our neighborhood by offering
+      a glimpse into what makes our area unique.
+
+  utter_breakfast_avail:
+  - text: The hotel provides its guests with a free made-to-order breakfast each morning.
+
+  utter_breakfast_time:
+  - text: Monday through Friday breakfast is 6 am to 9 am. On Saturday and Sunday,
+      we are open from 7 am to 10:30 am.
+
+  utter_restaurant_time:
+  - text: Our restaurant serves a dazzling 24-hour menu.
+
+  utter_is_that_all:
+  - text: Would that be all?
+
+  utter_goodbye:
+  - text: Ok then! Have a nice day!
+
+  utter_deny_message:
+  - text: How can I help you?
+  utter_fallback_message:
+  - text: Sorry, I did not understand. Can you rephrase?
+
+actions:
+- action_reset_slots
+- action_my_fallback
+- action_check_in_time
+- action_check_out_time
+- action_cancel_reservation
+- action_cancellation_policy
+- action_have_restaurant
+- action_breakfast_avail
+- action_breakfast_time
+- action_restaurant_time
+- utter_greet
+- utter_submit
+- utter_ask_number
+- utter_ask_room_type
+- utter_simple_room_image
+- utter_deluxe_room_image
+- utter_clean_room
+- utter_clean_room_now
+- utter_clean_room_relative
+- utter_check_in_time
+- utter_check_out_time
+- utter_cancel_reservation
+- utter_cancellation_policy
+- utter_have_restaurant
+- utter_breakfast_avail
+- utter_breakfast_time
+- utter_restaurant_time
+- utter_is_that_all
+- utter_goodbye
+- utter_deny_message
+
+forms:
+- form_book_room
+- form_book_room_number
