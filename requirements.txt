@@ -145,7 +145,7 @@ twilio==6.26.3
 typing-extensions==3.7.4.2
 tzlocal==2.1
 ujson==1.35
-urllib3==1.25.9
+urllib3==1.26.5
 wasabi==0.6.0
 wcwidth==0.1.9
 webexteamssdk==1.3
