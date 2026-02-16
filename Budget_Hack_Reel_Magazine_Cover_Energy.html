@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Swan Stories — Budget Hack Reel: Magazine Cover Energy</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --burgundy: #4B1423;
+    --burgundy-deep: #2A0B14;
+    --burgundy-mid: #6B2540;
+    --gold: #C4983B;
+    --gold-light: #D4AD5A;
+    --gold-pale: #F5E6C8;
+    --gold-muted: #B89350;
+    --cream: #FDF6EE;
+    --cream-dark: #F0E6D8;
+    --dusty-rose: #B4928E;
+    --dusty-rose-light: #D4B5B2;
+    --blush: #F5E0E4;
+    --sage: #8B9B7E;
+    --dark: #1A0A10;
+    --off-white: #FAF8F5;
+    --white: #FFFFFF;
+    --text-dark: #2D2D2D;
+    --text-grey: #999;
+    --text-mid: #666;
+    --rule: #E0D8CE;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #F5F2ED;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text-dark);
+    padding: 40px 20px;
+  }
+
+  /* ===== PAGE HEADER ===== */
+  .page-header {
+    text-align: center;
+    padding: 60px 20px 50px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .page-header .eyebrow {
+    font-family: 'Lato', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--gold-muted);
+    margin-bottom: 16px;
+  }
+  .page-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--burgundy);
+    line-height: 1.15;
+    margin-bottom: 12px;
+  }
+  .page-header h1 em {
+    font-style: italic;
+    color: var(--burgundy-mid);
+    font-weight: 500;
+  }
+  .page-header .rule {
+    width: 50px;
+    height: 1px;
+    background: var(--gold);
+    margin: 20px auto;
+  }
+  .page-header .desc {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    color: var(--text-mid);
+    line-height: 1.7;
+    max-width: 540px;
+    margin: 0 auto;
+  }
+
+  /* ===== SECTION ===== */
+  .section {
+    max-width: 1300px;
+    margin: 0 auto 80px;
+  }
+  .section-eyebrow {
+    font-family: 'Lato', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold-muted);
+    margin-bottom: 6px;
+  }
+  .section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    color: var(--burgundy);
+    margin-bottom: 4px;
+  }
+  .section .sub-desc {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    color: var(--text-grey);
+    font-style: italic;
+    margin-bottom: 36px;
+  }
+
+  /* ===== REEL SEQUENCE ===== */
+  .reel-sequence {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .frame-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .frame-info {
+    margin-top: 16px;
+    text-align: center;
+    max-width: 240px;
+  }
+  .frame-info .timing {
+    font-family: 'Lato', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold-muted);
+    margin-bottom: 4px;
+  }
+  .frame-info h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    color: var(--burgundy);
+    margin-bottom: 4px;
+  }
+  .frame-info p {
+    font-size: 11px;
+    color: var(--text-grey);
+    line-height: 1.55;
+  }
+
+  /* ===== REEL FRAME (9:16) ===== */
+  .reel-frame {
+    width: 240px;
+    height: 426px;
+    border-radius: 18px;
+    overflow: hidden;
+    position: relative;
+    box-shadow:
+      0 1px 3px rgba(0,0,0,0.04),
+      0 8px 30px rgba(75, 20, 35, 0.1);
+  }
+
+  /* ============================================
+     FRAME 1: HOOK — Magazine Cover
+     ============================================ */
+  .f1 {
+    background: var(--off-white);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  /* Top masthead bar */
+  .f1 .masthead {
+    background: var(--burgundy);
+    padding: 10px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .f1 .masthead .logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 2px;
+  }
+  .f1 .masthead .issue {
+    font-family: 'Lato', sans-serif;
+    font-size: 7px;
+    color: var(--dusty-rose-light);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  /* Hero image area */
+  .f1 .hero-img {
+    height: 155px;
+    background: linear-gradient(170deg, var(--dusty-rose-light) 0%, var(--blush) 40%, var(--cream) 100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .f1 .hero-img .photo-icon {
+    font-size: 44px;
+    opacity: 0.3;
+  }
+  /* Overlay badge */
+  .f1 .cover-badge {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background: var(--burgundy);
+    color: var(--gold);
+    font-family: 'Lato', sans-serif;
+    font-size: 7px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 5px 14px 5px 18px;
+  }
+  /* Cover headline area */
+  .f1 .cover-content {
+    padding: 20px 18px 16px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .f1 .cover-kicker {
+    font-family: 'Lato', sans-serif;
+    font-size: 8px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold-muted);
+    margin-bottom: 8px;
+  }
+  .f1 .cover-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: 27px;
+    font-weight: 800;
+    color: var(--burgundy);
+    line-height: 1.1;
+    margin-bottom: 10px;
+  }
+  .f1 .cover-headline em {
+    font-style: italic;
+    font-weight: 500;
+    color: var(--burgundy-mid);
+  }
+  .f1 .cover-deck {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+    color: var(--text-mid);
+    font-style: italic;
+    line-height: 1.5;
+    margin-bottom: auto;
+  }
+  .f1 .cover-rule {
+    width: 30px;
+    height: 1px;
+    background: var(--gold);
+    margin-top: 12px;
+  }
+
+  /* ============================================
+     FRAME 2: THE PROBLEM — Full-Bleed Stat
+     ============================================ */
+  .f2 {
+    background: var(--burgundy);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+  }
+  /* Thin gold line at top */
+  .f2 .top-rule {
+    height: 2px;
+    background: var(--gold);
+  }
+  .f2 .f2-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 28px 22px;
+  }
+  .f2 .section-label {
+    font-family: 'Lato', sans-serif;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 24px;
+    opacity: 0.7;
+  }
+  .f2 .stat-figure {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    color: var(--off-white);
+    line-height: 0.88;
+    margin-bottom: 6px;
+  }
+  .f2 .stat-figure .fig-rupee {
+    font-size: 42px;
+    display: block;
+    color: var(--gold);
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.2;
+  }
+  .f2 .stat-figure .fig-num {
+    font-size: 96px;
+    letter-spacing: -4px;
+  }
+  .f2 .stat-figure .fig-unit {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--dusty-rose-light);
+    letter-spacing: 3px;
+    display: block;
+    margin-top: 2px;
+  }
+  .f2 .stat-context {
+    margin-top: auto;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.6;
+    font-style: italic;
+    border-top: 1px solid rgba(196,152,59,0.2);
+    padding-top: 14px;
+  }
+  .f2 .stat-context strong {
+    color: var(--gold-pale);
+    font-weight: 600;
+    font-style: normal;
+  }
+  /* Decorative large faded text */
+  .f2 .bg-text {
+    position: absolute;
+    bottom: -15px;
+    right: -10px;
+    font-family: 'Playfair Display', serif;
+    font-size: 160px;
+    font-weight: 900;
+    color: rgba(255,255,255,0.025);
+    line-height: 1;
+    letter-spacing: -6px;
+  }
+
+  /* ============================================
+     FRAME 3: HACK #1 — Editorial Spread
+     ============================================ */
+  .f3 {
+    background: var(--off-white);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .f3 .f3-header {
+    padding: 16px 18px 12px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .f3 .hack-label {
+    font-family: 'Lato', sans-serif;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold-muted);
+  }
+  .f3 .hack-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    color: var(--burgundy);
+    font-weight: 300;
+    font-style: italic;
+  }
+  .f3 .f3-body {
+    padding: 20px 18px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .f3 .hack-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--burgundy);
+    line-height: 1.12;
+    margin-bottom: 14px;
+  }
+  .f3 .hack-headline em {
+    font-style: italic;
+    font-weight: 500;
+    display: block;
+    color: var(--burgundy-mid);
+  }
+  .f3 .hack-body {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    color: var(--text-mid);
+    line-height: 1.6;
+    font-style: italic;
+    margin-bottom: 16px;
+  }
+  /* Savings callout — editorial pull-quote style */
+  .f3 .savings-pull {
+    border-left: 2px solid var(--gold);
+    padding: 14px 16px;
+    background: var(--cream);
+    margin-bottom: auto;
+  }
+  .f3 .savings-pull .sp-label {
+    font-family: 'Lato', sans-serif;
+    font-size: 7px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold-muted);
+    margin-bottom: 4px;
+  }
+  .f3 .savings-pull .sp-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--burgundy);
+    line-height: 1;
+    margin-bottom: 3px;
+  }
+  .f3 .savings-pull .sp-detail {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 12px;
+    color: var(--text-grey);
+    font-style: italic;
+  }
+  /* Footer rule */
+  .f3 .f3-footer {
+    padding: 10px 18px;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .f3 .f3-footer .brand-sm {
+    font-family: 'Lato', sans-serif;
+    font-size: 7px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--text-grey);
+    opacity: 0.5;
+  }
+  .f3 .f3-footer .page-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11px;
+    color: var(--text-grey);
+    font-style: italic;
+  }
+
+  /* ============================================
+     FRAME 4: PROOF — Budget Breakdown Table
+     ============================================ */
+  .f4 {
+    background: var(--off-white);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .f4 .f4-header {
+    background: var(--burgundy);
+    padding: 14px 18px;
+  }
+  .f4 .f4-header .couple-line {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--off-white);
+    margin-bottom: 3px;
+  }
+  .f4 .f4-header .detail-line {
+    font-family: 'Lato', sans-serif;
+    font-size: 8px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .f4 .total-bar {
+    display: flex;
+    align-items: baseline;
+    padding: 12px 18px;
+    background: var(--cream);
+    border-bottom: 1px solid var(--rule);
+    gap: 8px;
+  }
+  .f4 .total-bar .tb-label {
+    font-family: 'Lato', sans-serif;
+    font-size: 8px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-grey);
+  }
+  .f4 .total-bar .tb-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--burgundy);
+  }
+  /* Table rows */
+  .f4 .table-body {
+    flex: 1;
+    padding: 6px 18px;
+  }
+  .f4 .t-row {
+    display: flex;
+    align-items: center;
+    padding: 7px 0;
+    border-bottom: 1px solid rgba(224,216,206,0.6);
+  }
+  .f4 .t-row:last-child { border-bottom: none; }
+  .f4 .t-row .t-cat {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+    color: var(--text-dark);
+    width: 70px;
+    flex-shrink: 0;
+  }
+  .f4 .t-row .t-bar-track {
+    flex: 1;
+    height: 6px;
+    background: var(--cream);
+    border-radius: 3px;
+    margin: 0 8px;
+    overflow: hidden;
+  }
+  .f4 .t-row .t-bar-fill {
+    height: 100%;
+    border-radius: 3px;
+    background: var(--gold);
+  }
+  .f4 .t-row .t-bar-fill.saved-fill {
+    background: var(--burgundy);
+  }
+  .f4 .t-row .t-amt {
+    font-family: 'Playfair Display', serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-dark);
+    width: 50px;
+    text-align: right;
+    flex-shrink: 0;
+  }
+  .f4 .t-row .t-amt.saved-amt {
+    color: var(--burgundy);
+  }
+  /* Saved indicator */
+  .f4 .t-row .saved-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--burgundy);
+    margin-left: 6px;
+    flex-shrink: 0;
+  }
+  .f4 .legend {
+    padding: 8px 18px;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .f4 .legend .leg-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--burgundy);
+  }
+  .f4 .legend span {
+    font-family: 'Lato', sans-serif;
+    font-size: 8px;
+    letter-spacing: 1px;
+    color: var(--text-grey);
+  }
+
+  /* ============================================
+     FRAME 5: HACK #2 — Split Comparison
+     ============================================ */
+  .f5 {
+    background: var(--off-white);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .f5 .f5-top {
+    padding: 16px 18px 12px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .f5 .f5-top .hack-label {
+    font-family: 'Lato', sans-serif;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold-muted);
+  }
+  .f5 .f5-top .hack-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    color: var(--burgundy);
+    font-weight: 300;
+    font-style: italic;
+  }
+  .f5 .f5-content {
+    padding: 18px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .f5 .hack-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--burgundy);
+    line-height: 1.12;
+    margin-bottom: 14px;
+  }
+  .f5 .hack-title em {
+    font-style: italic;
+    font-weight: 500;
+    color: var(--burgundy-mid);
+  }
+  /* Split comparison */
+  .f5 .comparison {
+    display: flex;
+    gap: 0;
+    margin-bottom: 14px;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .f5 .comp-side {
+    flex: 1;
+    padding: 14px 12px;
+    text-align: center;
+  }
+  .f5 .comp-side.comp-left {
+    background: var(--cream);
+    border-right: 1px solid var(--rule);
+  }
+  .f5 .comp-side.comp-right {
+    background: var(--burgundy);
+  }
+  .f5 .comp-side .comp-label {
+    font-family: 'Lato', sans-serif;
+    font-size: 7px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .f5 .comp-left .comp-label { color: var(--text-grey); }
+  .f5 .comp-right .comp-label { color: var(--gold); }
+  .f5 .comp-side .comp-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .f5 .comp-left .comp-price {
+    color: var(--dusty-rose);
+    text-decoration: line-through;
+    text-decoration-thickness: 1.5px;
+    text-decoration-color: var(--dusty-rose);
+  }
+  .f5 .comp-right .comp-price { color: var(--gold); }
+  .f5 .comp-side .comp-via {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11px;
+    font-style: italic;
+  }
+  .f5 .comp-left .comp-via { color: var(--text-grey); }
+  .f5 .comp-right .comp-via { color: var(--dusty-rose-light); }
+  /* Savings badge */
+  .f5 .save-badge {
+    align-self: center;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--cream);
+    border: 1px solid var(--gold);
+    padding: 8px 16px;
+    margin-bottom: 14px;
+  }
+  .f5 .save-badge .sb-label {
+    font-family: 'Lato', sans-serif;
+    font-size: 7px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold-muted);
+  }
+  .f5 .save-badge .sb-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--burgundy);
+  }
+  .f5 .hack-note {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+    color: var(--text-mid);
+    font-style: italic;
+    line-height: 1.55;
+    margin-top: auto;
+  }
+  .f5 .f5-footer {
+    padding: 10px 18px;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .f5 .f5-footer .brand-sm {
+    font-family: 'Lato', sans-serif;
+    font-size: 7px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--text-grey);
+    opacity: 0.5;
+  }
+  .f5 .f5-footer .page-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11px;
+    color: var(--text-grey);
+    font-style: italic;
+  }
+
+  /* ============================================
+     FRAME 6: TOTAL SAVINGS — Full-Bleed Impact
+     ============================================ */
+  .f6 {
+    background: var(--dark);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+  }
+  .f6 .f6-gold-rule {
+    height: 2px;
+    background: var(--gold);
+  }
+  .f6 .f6-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 28px 22px;
+    position: relative;
+    z-index: 2;
+  }
+  .f6 .f6-eyebrow {
+    font-family: 'Lato', sans-serif;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+    opacity: 0.7;
+  }
+  .f6 .f6-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.3;
+    margin-bottom: 4px;
+  }
+  .f6 .f6-number {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    line-height: 0.85;
+    margin-bottom: 8px;
+  }
+  .f6 .f6-number .n-rupee {
+    font-size: 36px;
+    color: var(--gold);
+    font-style: italic;
+    font-weight: 400;
+  }
+  .f6 .f6-number .n-val {
+    font-size: 88px;
+    color: var(--off-white);
+    letter-spacing: -3px;
+  }
+  .f6 .f6-unit {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-style: italic;
+    color: var(--dusty-rose-light);
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+  }
+  /* Breakdown list — editorial style */
+  .f6 .breakdown-list {
+    margin-top: auto;
+    border-top: 1px solid rgba(196,152,59,0.2);
+    padding-top: 14px;
+  }
+  .f6 .bl-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 5px 0;
+  }
+  .f6 .bl-row .bl-item {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+    color: rgba(255,255,255,0.45);
+    font-style: italic;
+  }
+  .f6 .bl-row .bl-amt {
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--gold);
+  }
+  .f6 .bl-row .bl-dots {
+    flex: 1;
+    border-bottom: 1px dotted rgba(255,255,255,0.1);
+    margin: 0 8px;
+    transform: translateY(-3px);
+  }
+  /* Huge faded bg element */
+  .f6 .bg-rupee {
+    position: absolute;
+    top: 30px;
+    right: -20px;
+    font-family: 'Playfair Display', serif;
+    font-size: 260px;
+    font-weight: 900;
+    color: rgba(255,255,255,0.015);
+    line-height: 1;
+  }
+
+  /* ============================================
+     FRAME 7: CTA — Clean Magazine Back-Cover
+     ============================================ */
+  .f7 {
+    background: var(--cream);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+  }
+  /* Thin border inset */
+  .f7::before {
+    content: '';
+    position: absolute;
+    top: 10px; left: 10px; right: 10px; bottom: 10px;
+    border: 0.5px solid var(--gold);
+    opacity: 0.35;
+    pointer-events: none;
+    z-index: 2;
+  }
+  .f7 .f7-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 36px 24px;
+    text-align: center;
+    position: relative;
+    z-index: 3;
+  }
+  .f7 .f7-eyebrow {
+    font-family: 'Lato', sans-serif;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold-muted);
+    margin-bottom: 18px;
+  }
+  .f7 .f7-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--burgundy);
+    line-height: 1.15;
+    margin-bottom: 6px;
+  }
+  .f7 .f7-headline em {
+    font-style: italic;
+    font-weight: 500;
+    color: var(--burgundy-mid);
+  }
+  .f7 .f7-rule {
+    width: 30px;
+    height: 1px;
+    background: var(--gold);
+    margin: 14px auto;
+  }
+  .f7 .f7-deck {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    color: var(--text-mid);
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 22px;
+    max-width: 180px;
+  }
+  .f7 .f7-btn {
+    background: var(--burgundy);
+    color: var(--gold);
+    font-family: 'Lato', sans-serif;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 10px 24px;
+    margin-bottom: 12px;
+  }
+  .f7 .f7-handle {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: var(--burgundy);
+    font-weight: 600;
+  }
+  /* Bottom bar */
+  .f7 .f7-bottom-bar {
+    background: var(--burgundy);
+    padding: 10px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+  }
+  .f7 .f7-bottom-bar .bb-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 11px;
+    color: var(--gold);
+    letter-spacing: 2px;
+  }
+  .f7 .f7-bottom-bar .bb-tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 9px;
+    color: var(--dusty-rose-light);
+    font-style: italic;
+  }
+
+  /* ============================================
+     DESIGN PHILOSOPHY NOTES
+     ============================================ */
+  .philosophy {
+    max-width: 900px;
+    margin: 40px auto 20px;
+    background: white;
+    border-radius: 16px;
+    padding: 44px;
+    box-shadow: 0 4px 20px rgba(75,20,35,0.06);
+  }
+  .philosophy h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: var(--burgundy);
+    text-align: center;
+    margin-bottom: 6px;
+  }
+  .philosophy .ph-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    color: var(--text-grey);
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 28px;
+  }
+  .ph-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 16px;
+  }
+  .ph-card {
+    padding: 18px;
+    border-left: 2px solid var(--gold);
+    background: var(--cream);
+    border-radius: 0 8px 8px 0;
+  }
+  .ph-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    color: var(--burgundy);
+    margin-bottom: 5px;
+  }
+  .ph-card p {
+    font-size: 11.5px;
+    color: var(--text-mid);
+    line-height: 1.6;
+  }
+  .ph-card .tool-tag {
+    display: inline-block;
+    margin-top: 8px;
+    font-family: 'Lato', sans-serif;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    background: var(--burgundy);
+    padding: 3px 10px;
+  }
+
+  /* Comparison strip */
+  .compare-strip {
+    max-width: 900px;
+    margin: 40px auto;
+    background: var(--burgundy);
+    border-radius: 16px;
+    padding: 32px 40px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .compare-strip h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: var(--gold);
+    width: 100%;
+    text-align: center;
+    margin-bottom: 4px;
+  }
+  .compare-strip .cs-sub {
+    width: 100%;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+    color: var(--dusty-rose-light);
+    font-style: italic;
+    margin-bottom: 14px;
+  }
+  .compare-col {
+    text-align: center;
+    flex: 1;
+    min-width: 160px;
+  }
+  .compare-col .cc-label {
+    font-family: 'Lato', sans-serif;
+    font-size: 8px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+    opacity: 0.7;
+  }
+  .compare-col .cc-traits {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+    font-style: italic;
+    line-height: 1.8;
+  }
+  .compare-vs {
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    color: var(--gold);
+    font-style: italic;
+    opacity: 0.4;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  .footer .brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    color: var(--burgundy);
+    margin-bottom: 4px;
+  }
+  .footer p {
+    font-size: 12px;
+    color: var(--text-grey);
+  }
+  .footer .tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--dusty-rose);
+    margin-top: 6px;
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="eyebrow">Reel Design Language — Option 2</div>
+  <h1>Budget Hack Reel:<br><em>Magazine Cover Energy</em></h1>
+  <div class="rule"></div>
+  <p class="desc">
+    Every frame feels like it was art-directed for a premium Indian wedding publication.
+    Bold serif typography, editorial white space, clean data presentation, and quiet authority.
+    The kind of design that makes a ₹14.5 lakh wedding feel like it belongs on a magazine cover.
+  </p>
+</div>
+
+<!-- REEL SEQUENCE -->
+<div class="section">
+  <div class="section-eyebrow">7-Frame Sequence</div>
+  <h2>"This Couple Saved ₹4 Lakh"</h2>
+  <p class="sub-desc">The same budget hack story — now told with editorial restraint and typographic confidence.</p>
+
+  <div class="reel-sequence">
+
+    <!-- FRAME 1: MAGAZINE COVER HOOK -->
+    <div class="frame-wrap">
+      <div class="reel-frame f1">
+        <div class="masthead">
+          <span class="logo-text">Swan Stories</span>
+          <span class="issue">Budget Issue</span>
+        </div>
+        <div class="hero-img">
+          <span class="photo-icon">👫</span>
+          <div class="cover-badge">Real Wedding Feature</div>
+        </div>
+        <div class="cover-content">
+          <div class="cover-kicker">Budget Hack Series</div>
+          <div class="cover-headline">They Saved<br><em>₹4 Lakh</em></div>
+          <div class="cover-deck">How one Lucknow couple planned a 300-guest wedding that looked like a dream — for half the expected cost.</div>
+          <div class="cover-rule"></div>
+        </div>
+      </div>
+      <div class="frame-info">
+        <div class="timing">0:00 — 0:03</div>
+        <h4>The Cover</h4>
+        <p>Literal magazine cover layout. Masthead bar, hero image zone, bold headline below. Feels premium and trustworthy from the first frame.</p>
+      </div>
+    </div>
+
+    <!-- FRAME 2: THE PROBLEM — STAT -->
+    <div class="frame-wrap">
+      <div class="reel-frame f2">
+        <div class="top-rule"></div>
+        <div class="f2-body">
+          <div class="section-label">The Problem</div>
+          <div class="stat-figure">
+            <span class="fig-rupee">₹</span>
+            <span class="fig-num">25L</span>
+            <span class="fig-unit">average spend</span>
+          </div>
+          <div class="stat-context">
+            That's what the average North Indian wedding costs. But <strong>most couples don't need to spend this much.</strong>
+          </div>
+        </div>
+        <div class="bg-text">₹</div>
+      </div>
+      <div class="frame-info">
+        <div class="timing">0:03 — 0:07</div>
+        <h4>The Problem</h4>
+        <p>Massive typography on burgundy. The number dominates. The faded ₹ watermark in the background adds depth without distraction. Pure editorial authority.</p>
+      </div>
+    </div>
+
+    <!-- FRAME 3: HACK #1 — EDITORIAL SPREAD -->
+    <div class="frame-wrap">
+      <div class="reel-frame f3">
+        <div class="f3-header">
+          <span class="hack-label">Budget Hack</span>
+          <span class="hack-num">01 / 03</span>
+        </div>
+        <div class="f3-body">
+          <div class="hack-headline">Book Your Venue<br><em>Off-Season</em></div>
+          <div class="hack-body">
+            Most venues charge 30–50% less on non-muhurat dates. One week's shift. Same venue. Half the price.
+          </div>
+          <div class="savings-pull">
+            <div class="sp-label">Estimated Savings</div>
+            <div class="sp-number">₹2.5L</div>
+            <div class="sp-detail">Shifted date by one week in Lucknow</div>
+          </div>
+        </div>
+        <div class="f3-footer">
+          <span class="brand-sm">Swan Stories</span>
+          <span class="page-num">03</span>
+        </div>
+      </div>
+      <div class="frame-info">
+        <div class="timing">0:07 — 0:18</div>
+        <h4>Hack #1: Editorial Spread</h4>
+        <p>Magazine article layout. Header bar with page number, bold serif headline, body text, and a pull-quote style savings callout with gold left-border. Footer mimics page numbering.</p>
+      </div>
+    </div>
+
+    <!-- FRAME 4: PROOF — TABLE BREAKDOWN -->
+    <div class="frame-wrap">
+      <div class="reel-frame f4">
+        <div class="f4-header">
+          <div class="couple-line">Priya & Rahul</div>
+          <div class="detail-line">Lucknow · 300 Guests · November 2025</div>
+        </div>
+        <div class="total-bar">
+          <span class="tb-label">Total Budget</span>
+          <span class="tb-num">₹14.5L</span>
+        </div>
+        <div class="table-body">
+          <div class="t-row">
+            <span class="t-cat">Venue</span>
+            <div class="t-bar-track"><div class="t-bar-fill saved-fill" style="width:56%"></div></div>
+            <span class="t-amt saved-amt">₹2.5L</span>
+            <span class="saved-dot"></span>
+          </div>
+          <div class="t-row">
+            <span class="t-cat">Catering</span>
+            <div class="t-bar-track"><div class="t-bar-fill" style="width:48%"></div></div>
+            <span class="t-amt">₹3.2L</span>
+          </div>
+          <div class="t-row">
+            <span class="t-cat">Bridal</span>
+            <div class="t-bar-track"><div class="t-bar-fill" style="width:27%"></div></div>
+            <span class="t-amt">₹1.8L</span>
+          </div>
+          <div class="t-row">
+            <span class="t-cat">Photo</span>
+            <div class="t-bar-track"><div class="t-bar-fill" style="width:13%"></div></div>
+            <span class="t-amt">₹90K</span>
+          </div>
+          <div class="t-row">
+            <span class="t-cat">Décor</span>
+            <div class="t-bar-track"><div class="t-bar-fill saved-fill" style="width:22%"></div></div>
+            <span class="t-amt saved-amt">₹1.5L</span>
+            <span class="saved-dot"></span>
+          </div>
+          <div class="t-row">
+            <span class="t-cat">Makeup</span>
+            <div class="t-bar-track"><div class="t-bar-fill" style="width:7%"></div></div>
+            <span class="t-amt">₹45K</span>
+          </div>
+          <div class="t-row">
+            <span class="t-cat">DJ</span>
+            <div class="t-bar-track"><div class="t-bar-fill" style="width:5%"></div></div>
+            <span class="t-amt">₹35K</span>
+          </div>
+          <div class="t-row">
+            <span class="t-cat">Other</span>
+            <div class="t-bar-track"><div class="t-bar-fill" style="width:18%"></div></div>
+            <span class="t-amt">₹1.3L</span>
+          </div>
+        </div>
+        <div class="legend">
+          <span class="leg-dot"></span>
+          <span>= where they saved</span>
+        </div>
+      </div>
+      <div class="frame-info">
+        <div class="timing">0:18 — 0:28</div>
+        <h4>Budget Table</h4>
+        <p>Clean data table like a financial report inside a magazine. Burgundy header, gold-bar chart, burgundy dots marking savings categories. No decoration — just clear, trustworthy data.</p>
+      </div>
+    </div>
+
+    <!-- FRAME 5: HACK #2 — SPLIT COMPARISON -->
+    <div class="frame-wrap">
+      <div class="reel-frame f5">
+        <div class="f5-top">
+          <span class="hack-label">Budget Hack</span>
+          <span class="hack-num">02 / 03</span>
+        </div>
+        <div class="f5-content">
+          <div class="hack-title">Buy Flowers<br><em>Directly</em></div>
+          <div class="comparison">
+            <div class="comp-side comp-left">
+              <div class="comp-label">Via Decorator</div>
+              <div class="comp-price">₹1.2L</div>
+              <div class="comp-via">Full-service markup</div>
+            </div>
+            <div class="comp-side comp-right">
+              <div class="comp-label">Direct Mandi</div>
+              <div class="comp-price">₹52K</div>
+              <div class="comp-via">Same marigolds, no middleman</div>
+            </div>
+          </div>
+          <div class="save-badge">
+            <span class="sb-label">You Save</span>
+            <span class="sb-num">₹68K</span>
+          </div>
+          <div class="hack-note">
+            "We went to the local flower market at 5 AM the day before. Bought everything for less than half."<br>— Priya, Lucknow
+          </div>
+        </div>
+        <div class="f5-footer">
+          <span class="brand-sm">Swan Stories</span>
+          <span class="page-num">05</span>
+        </div>
+      </div>
+      <div class="frame-info">
+        <div class="timing">0:28 — 0:40</div>
+        <h4>Hack #2: Split Comparison</h4>
+        <p>Editorial comparison layout. Left side is cream (old price, struck through), right side is burgundy (new price in gold). The contrast tells the story instantly. A real quote at the bottom adds credibility like a magazine pull-quote.</p>
+      </div>
+    </div>
+
+    <!-- FRAME 6: TOTAL SAVINGS — DARK IMPACT -->
+    <div class="frame-wrap">
+      <div class="reel-frame f6">
+        <div class="f6-gold-rule"></div>
+        <div class="f6-body">
+          <div class="f6-eyebrow">Total Savings</div>
+          <div class="f6-headline">They kept</div>
+          <div class="f6-number">
+            <span class="n-rupee">₹</span><span class="n-val">4.2L</span>
+          </div>
+          <div class="f6-unit">in their pocket</div>
+          <div class="breakdown-list">
+            <div class="bl-row">
+              <span class="bl-item">Venue (off-season)</span>
+              <span class="bl-dots"></span>
+              <span class="bl-amt">₹2.50L</span>
+            </div>
+            <div class="bl-row">
+              <span class="bl-item">Flowers (direct)</span>
+              <span class="bl-dots"></span>
+              <span class="bl-amt">₹0.68L</span>
+            </div>
+            <div class="bl-row">
+              <span class="bl-item">Catering (negotiated)</span>
+              <span class="bl-dots"></span>
+              <span class="bl-amt">₹1.02L</span>
+            </div>
+          </div>
+        </div>
+        <div class="bg-rupee">₹</div>
+      </div>
+      <div class="frame-info">
+        <div class="timing">0:40 — 0:50</div>
+        <h4>The Payoff</h4>
+        <p>Near-black background with gold rule at top. Giant number. "They kept ₹4.2L in their pocket" reads like a magazine feature headline. Dotted-line breakdown below mimics financial reporting. The faded ₹ watermark ties back to Frame 2.</p>
+      </div>
+    </div>
+
+    <!-- FRAME 7: CTA — MAGAZINE BACK COVER -->
+    <div class="frame-wrap">
+      <div class="reel-frame f7">
+        <div class="f7-body">
+          <div class="f7-eyebrow">Every Tuesday</div>
+          <div class="f7-headline">More<br><em>Budget Hacks</em></div>
+          <div class="f7-rule"></div>
+          <div class="f7-deck">Real couples. Real savings. Every week on your feed.</div>
+          <div class="f7-btn">Follow + Save</div>
+          <div class="f7-handle">@swanstories</div>
+        </div>
+        <div class="f7-bottom-bar">
+          <span class="bb-logo">Swan Stories</span>
+          <span class="bb-tagline">Pyaar se hoti hai shaadi</span>
+        </div>
+      </div>
+      <div class="frame-info">
+        <div class="timing">0:50 — 0:58</div>
+        <h4>Back Cover CTA</h4>
+        <p>The magazine's back cover. Cream background, thin gold inset border, centered headline, brand bar at bottom. Clean, confident, not desperate. The whole frame breathes.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- DESIGN PHILOSOPHY -->
+<div class="philosophy">
+  <h2>Design Principles: Magazine Cover Energy</h2>
+  <p class="ph-sub">What makes this design language distinct from the Desi Scrapbook approach</p>
+
+  <div class="ph-grid">
+    <div class="ph-card">
+      <h4>Typography Is the Design</h4>
+      <p>No stickers, no doodles, no emojis. The Playfair Display headline at the right size, weight, and position IS the visual. Every frame could work in black and white — the typography carries it alone.</p>
+    </div>
+    <div class="ph-card">
+      <h4>White Space = Confidence</h4>
+      <p>Resist the urge to fill every pixel. The empty space between elements tells the viewer: "we're so good, we don't need to shout." Every magazine cover has generous margins — your reel frames should too.</p>
+    </div>
+    <div class="ph-card">
+      <h4>Two-Color Maximum Per Frame</h4>
+      <p>Each frame uses at most two dominant colors. Burgundy + gold on dark. Burgundy + off-white on cream. This restraint is what creates the "premium" feeling. More colors = more chaos = less authority.</p>
+    </div>
+    <div class="ph-card">
+      <h4>Editorial Structure</h4>
+      <p>Header bars, footer rules, page numbers, section labels — these aren't decorative. They signal "this is a publication, not a random post." It positions Swan Stories as a media brand from day one.</p>
+    </div>
+    <div class="ph-card">
+      <h4>Data Without Decoration</h4>
+      <p>Budget breakdowns use clean bar charts and dotted-line tables — like financial journalism. No pie charts, no 3D effects. The numbers themselves are visually striking because of size and typography, not because of flashy graphics.</p>
+    </div>
+    <div class="ph-card">
+      <h4>Pull-Quote Treatment</h4>
+      <p>When you include a couple's quote, frame it like a magazine pull-quote: gold left-border, italic Cormorant Garamond, attribution with city. This elevates a simple testimonial into editorial content.</p>
+    </div>
+    <div class="ph-card">
+      <h4>Consistent Frame Architecture</h4>
+      <p>Every light frame has: header bar (label + page number) → content → footer bar (brand + page number). This creates rhythm and recognition across slides. The viewer subconsciously registers "this is a series."</p>
+      <span class="tool-tag">Canva Template</span>
+    </div>
+    <div class="ph-card">
+      <h4>Transitions: Less Is More</h4>
+      <p>Between frames, use only "Cut" or "Fade" (0.2s) in CapCut. No swoops, no spins. Magazine pages don't animate — they just appear. The content itself creates momentum, not the transition.</p>
+      <span class="tool-tag">CapCut</span>
+    </div>
+  </div>
+</div>
+
+<!-- COMPARISON -->
+<div class="compare-strip">
+  <h3>When to Use Which Style</h3>
+  <p class="cs-sub">Both design languages serve different strategic goals</p>
+  <div class="compare-col">
+    <div class="cc-label">Desi Scrapbook + Data Pop</div>
+    <div class="cc-traits">
+      Warm, personal, Gen-Z friendly<br>
+      Higher shareability<br>
+      "Your bestie sharing tips"<br>
+      Best for: Hack reels, fun content<br>
+      Drives: Shares + follows
+    </div>
+  </div>
+  <div class="compare-vs">vs</div>
+  <div class="compare-col">
+    <div class="cc-label">Magazine Cover Energy</div>
+    <div class="cc-traits">
+      Authoritative, premium, editorial<br>
+      Higher save rate<br>
+      "Your trusted wedding guide"<br>
+      Best for: Features, vendor content<br>
+      Drives: Saves + brand deals
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="brand">SWAN STORIES</div>
+  <p>Budget Hack Reel — Magazine Cover Energy Mockups</p>
+  <p class="tagline">Modern Indian Editorial × Typographic Authority</p>
+</div>
+
+</body>
+</html>
